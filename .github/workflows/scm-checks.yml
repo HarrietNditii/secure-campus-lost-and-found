@@ -1,0 +1,25 @@
+
+name: SCM Documentation Checks
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  documentation-check:
+    name: Verify project documentation
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Verify README exists
+        run: test -f README.md
+
+      - name: Verify SCM Plan exists
+        run: test -f docs/SCM-Plan.md
