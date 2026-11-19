@@ -1,0 +1,13 @@
+.git
+.gitignore
+.dockerignore
+.env
+.env.*
+node_modules
+dist
+coverage
+npm-debug.log*
+*.log
+*.tsbuildinfo
+src/**/*.test.ts
+README*
